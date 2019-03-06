@@ -1,5 +1,6 @@
 package unisoft.com.demotwo.view;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -43,11 +44,13 @@ public class MainActivity extends AppCompatActivity implements MainContract.main
 
         RelativeLayout relativeLayout = new RelativeLayout(this);
         relativeLayout.setGravity(Gravity.CENTER);
+       relativeLayout.setBackgroundColor(Color.TRANSPARENT);
         relativeLayout.addView(progressBar);
 
         RelativeLayout.LayoutParams params = new
                 RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
        // progressBar.setVisibility(View.INVISIBLE);
+
 
         this.addContentView(relativeLayout, params);
         progressBar.setVisibility(View.VISIBLE);
